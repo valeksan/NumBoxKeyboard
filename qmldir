@@ -1,0 +1,4 @@
+# /qmldir
+NumBoxKeyboard 1.0 NumBoxKeyboard.qml
+ButtonDlg 1.0 ButtonDlg.qml
+ButtonKey 1.0 ButtonKey.qml

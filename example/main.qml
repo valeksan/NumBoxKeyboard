@@ -1,7 +1,10 @@
-// main.qml
+// example/main.qml
 import QtQuick
 import QtQuick.Window
 import QtQuick.Controls
+import Qml
+
+import "."
 
 Window {
     visible: true
@@ -73,7 +76,6 @@ Window {
                     if (!numKeyboard.visible) {
                         // Open the keyboard with the current value
                         numKeyboard.show(textEdit.text);
-                        print(numKeyboard.visible)
                     }
                 }
             }
@@ -88,7 +90,7 @@ Window {
         anchors.topMargin: 20
         anchors.horizontalCenter: parent.horizontalCenter
         onClicked: {
-            numKeyboard.show(textEdit.text);
+            numKeyboard.show(textEdit.text, true);
         }
     }
 
