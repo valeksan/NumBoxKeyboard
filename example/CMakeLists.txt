@@ -1,35 +1,38 @@
-# Требуем минимальную версию CMake
+# Require minimum CMake version
 cmake_minimum_required(VERSION 3.16)
 
-# Указываем проект
+# Specify the project
+# The project is located in the example/ folder, and CMakeLists.txt is there too
 project(example VERSION 1.0.0 LANGUAGES CXX)
 
-# Указываем стандарт C++
+# Set C++ standard
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# Ищем Qt6 с нужными компонентами
+# Find Qt6 with required components
 find_package(Qt6 REQUIRED COMPONENTS Core Gui Qml Quick QuickControls2 QuickLayouts)
 
-# Включаем автогенерацию MOC, RCC, UIC (только для Qt6)
+# Enable auto-generation of MOC, RCC, UIC (Qt6 only)
 qt_standard_project_setup()
 
-# Определяем исполняемый файл
+# Define the executable
 qt_add_executable(example
     main.cpp
 )
 
-# Подключаем QML-файлы как ресурсы
+# Add QML files as resources
+# Paths are relative to the folder containing CMakeLists.txt (example/)
 qt_add_resources(example "qml"
     PREFIX "/"
     FILES
         main.qml
-        NumBoxKeyboard.qml
-        ButtonDlg.qml
-        ButtonKey.qml
+        ../NumBoxKeyboard.qml
+        ../ButtonDlg.qml
+        ../ButtonKey.qml
+        ../qtquickcontrols2.conf
 )
 
-# Связываем с нужными Qt-модулями
+# Link against required Qt modules
 target_link_libraries(example
     PRIVATE
         Qt6::Core
@@ -40,7 +43,7 @@ target_link_libraries(example
         Qt6::QuickLayouts
 )
 
-# Устанавливаем приложение (опционально)
+# Install the application (optional)
 install(TARGETS example
     RUNTIME DESTINATION bin
 )
