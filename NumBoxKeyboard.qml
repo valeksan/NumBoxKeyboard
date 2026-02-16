@@ -87,7 +87,6 @@ Item {
             numberStr = "";
         let tmpValue = numberStr ? dialog.getAbsValueStr(numberStr) : ""
         let countD = 0;
-        visible = true;
         dialogPanel.visible = true;
         if (tmpValue) {
             if (dialog.decimals > 0 && dialog.minimumValue >= 0) {
@@ -112,7 +111,6 @@ Item {
         dialogPanel.visible = false;
         dialog.flagCurrentValueSetted = false;
         dialog.value = "";
-        visible = false;
     }
     /* clear input */
     function clear() {
