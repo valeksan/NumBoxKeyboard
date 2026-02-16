@@ -88,6 +88,7 @@ Item {
         let tmpValue = numberStr ? dialog.getAbsValueStr(numberStr) : ""
         let countD = 0;
         dialogPanel.visible = true;
+        print("is_placeholder: ", is_placeholder)
         if (tmpValue) {
             if (dialog.decimals > 0 && dialog.minimumValue >= 0) {
                 let i;
@@ -102,7 +103,8 @@ Item {
                     tmpValue = tmpValue.substring(1);
                 }
             }
-            dialog.value = dialog.toPosixTextValue(tmpValue);
+            dialog.value = ""
+            dialog.placeholderValue = dialog.toPosixTextValue(tmpValue);
             dialog.flag_minus = (parseFloat(numberStr) < 0);
         }
     }
