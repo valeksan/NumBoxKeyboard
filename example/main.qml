@@ -72,7 +72,7 @@ Window {
             MouseArea {
                 anchors.fill: parent
                 onClicked: {
-                    if (!numKeyboard.visible) {
+                    if (!numKeyboard.isVisible()) {
                         // Open the keyboard with the current value
                         numKeyboard.show(textEdit.text);
                     }
@@ -89,7 +89,7 @@ Window {
         anchors.topMargin: 20
         anchors.horizontalCenter: parent.horizontalCenter
         onClicked: {
-            numKeyboard.show(textEdit.text, true);
+            numKeyboard.show(textEdit.text);
         }
     }
 
@@ -102,13 +102,7 @@ Window {
         precision: 3  // number of decimal places
         decimals: 3   // number of allowed decimal digits
         antialiasing: true
-        placeholderValue: textEdit.text  // initial value when opened
-
-        // Position the keyboard to fill the window
         anchors.fill: parent
-
-        // Hide the keyboard by default
-        visible: false
     }
 
     // Handle signals from the keyboard
@@ -117,11 +111,9 @@ Window {
         function onOk(number, is_equal) {
             console.log("User selected:", number);
             textEdit.text = number;
-            numKeyboard.visible = false;  // hide the keyboard after input
         }
         function onCancel() {
             console.log("User canceled input.");
-            numKeyboard.visible = false;  // hide the keyboard
         }
     }
 }
