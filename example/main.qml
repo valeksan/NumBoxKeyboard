@@ -72,10 +72,7 @@ Window {
             MouseArea {
                 anchors.fill: parent
                 onClicked: {
-                    if (!numKeyboard.isVisible()) {
-                        // Open the keyboard with the current value
-                        numKeyboard.show(textEdit.text);
-                    }
+                    numKeyboard.show(textEdit.text);
                 }
             }
         }
