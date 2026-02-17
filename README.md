@@ -3,8 +3,7 @@
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Qt](https://img.shields.io/badge/Qt-6.x-blue.svg)
-![C++](https://img.shields.io/badge/Language-C%2B%2B-blue.svg)
-![QML](https://img.shields.io/badge/Language-QML-red.svg)
+![Language](https://img.shields.io/badge/Language-QML%20%2B%20JavaScript-orange.svg)
 
 A customizable numeric keyboard component for Qt Quick applications.
 
