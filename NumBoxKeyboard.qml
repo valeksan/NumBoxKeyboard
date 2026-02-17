@@ -2,6 +2,8 @@ import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls
 
+import Qt.labs.platform
+
 Item {
     id: dialog
 
@@ -300,25 +302,6 @@ Item {
         dialog.cancel();
     }
 
-    // --- Clipboard Helper ---
-    QtObject {
-        id: clipboardHelper
-        function copy(text) {
-            Qt.inputMethod.commit(text);
-            // Note: Actual clipboard access might require additional permissions or modules.
-            // For simplicity, assuming a global clipboard object exists.
-            // globalClipboard.copy(text); // Replace with actual implementation
-        }
-        function past() {
-            // globalClipboard.paste(); // Replace with actual implementation
-            return "";
-        }
-        function canPast() {
-            // return globalClipboard.hasText; // Replace with actual implementation
-            return false;
-        }
-    }
-
     // --- Shadow ---
     Rectangle {
         id: dialogMsgShadow
@@ -345,28 +328,6 @@ Item {
         focus: true
         onVisibleChanged: {
             if (visible) { Keys.enabled = true; dialogPanel.forceActiveFocus(); }
-        }
-
-        // Context menu (optional)
-        Menu {
-            id: contextMenu
-            MenuItem {
-                text: qsTr("Copy")
-                enabled: (dialog.value.length > 0) || (dialog.placeholderSafeValue.length > 0)
-                onTriggered: dialog.copyValue()
-            }
-            MenuItem {
-                text: qsTr("Paste")
-                enabled: clipboardHelper.canPast()
-                onTriggered: dialog.pastValue()
-            }
-        }
-
-        MouseArea {
-            id: panelMouseArea
-            anchors.fill: parent
-            acceptedButtons: Qt.RightButton
-            onClicked: if (mouse.button === Qt.RightButton) contextMenu.popup()
         }
 
         // --- Content Panel ---
@@ -406,11 +367,6 @@ Item {
                     horizontalAlignment: Text.AlignHCenter
                     verticalAlignment: Text.AlignVCenter
                     elide: Text.ElideRight
-                }
-                MouseArea {
-                    anchors.fill: parent
-                    acceptedButtons: Qt.RightButton
-                    onClicked: if (mouse.button === Qt.RightButton) contextMenu.popup()
                 }
             }
 
