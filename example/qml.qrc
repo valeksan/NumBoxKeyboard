@@ -1,8 +1,6 @@
 <RCC>
     <qresource prefix="/">
         <file>main.qml</file>
-        <file>../ButtonDlg.qml</file>
-        <file>../ButtonKey.qml</file>
         <file>../NumBoxKeyboard.qml</file>
         <file>../qtquickcontrols2.conf</file>
     </qresource>

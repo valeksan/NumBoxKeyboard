@@ -103,6 +103,8 @@ Window {
         decimals: 3   // number of allowed decimal digits
         antialiasing: true
         anchors.fill: parent
+        // enableSequenceGrid: true
+        // sequenceStep: 0.5
     }
 
     // Handle signals from the keyboard

@@ -23,8 +23,6 @@ qt_add_resources(example "qml"
     FILES
         main.qml
         ../NumBoxKeyboard.qml
-        ../ButtonDlg.qml
-        ../ButtonKey.qml
         ../qtquickcontrols2.conf
 )
 

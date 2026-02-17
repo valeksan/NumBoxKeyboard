@@ -9,8 +9,6 @@ RESOURCES += qml.qrc
 
 OTHER_FILES += \
     ../NumBoxKeyboard.qml \
-    ../ButtonDlg.qml \
-    ../ButtonKey.qml \
     ../qtquickcontrols2.conf \
     ../qmldir \
     main.qml
