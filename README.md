@@ -12,9 +12,10 @@ A customizable numeric keyboard component for Qt Quick applications.
 - **Numeric Input**: Designed specifically for entering numerical values.
 - **Range Configuration**: Supports setting minimum and maximum allowed values.
 - **Precision Control**: Allows defining the number of decimal places (`decimals`) and overall precision.
+- **Grid of values**: The ability to set the input grid (so that only the buttons for entering numbers applicable to the step grid are allowed).
 - **Placeholder Value as Hint**: Displays the initial value passed to `show()` as a greyed-out hint when the input field is empty. The actual input starts fresh. The `#` button toggles between the empty state and this hint.
-- **Customizable Styling**: Designed to integrate seamlessly with Qt Quick Controls 2 styles (e.g., `Basic`, `Material`, `Fusion`) without requiring custom `ButtonDlg.qml` or `ButtonKey.qml` components.
-- **Qt6 Compatible**: Works with Qt 6.x (requires `QQuickStyle::setStyle("Basic")` or similar).
+- **Customizable Styling**: Designed to integrate seamlessly with Qt Quick Controls 2 styles (e.g., `Basic`, `Material`, `Fusion`).
+- **Qt6 Compatible**: Works with Qt 6.x.
 
 ## Prerequisites
 
