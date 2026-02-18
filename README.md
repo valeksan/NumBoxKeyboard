@@ -13,7 +13,6 @@ A customizable numeric keyboard component for Qt Quick applications.
 - **Range Configuration**: Supports setting minimum and maximum allowed values.
 - **Precision Control**: Allows defining the number of decimal places (`decimals`) and overall precision.
 - **Placeholder Value as Hint**: Displays the initial value passed to `show()` as a greyed-out hint when the input field is empty. The actual input starts fresh. The `#` button toggles between the empty state and this hint.
-- **Sign Toggle (`+/-`)**: Instantly updates the displayed sign and underlying value.
 - **Customizable Styling**: Designed to integrate seamlessly with Qt Quick Controls 2 styles (e.g., `Basic`, `Material`, `Fusion`) without requiring custom `ButtonDlg.qml` or `ButtonKey.qml` components.
 - **Qt6 Compatible**: Works with Qt 6.x (requires `QQuickStyle::setStyle("Basic")` or similar).
 
