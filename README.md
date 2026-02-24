@@ -7,9 +7,11 @@
 
 A customizable numeric keyboard component for Qt Quick applications.
 
-![example app screenshot](example/screen_example.jpg)
-![example app screenshot](example/screen_example_h.jpg)
-![example app screenshot](example/screen_example_v.jpg)
+<div align="center">
+  <img src="example/screen_example.jpg" style="height: 200px; margin: 5px;" alt="Main"/>
+  <img src="example/screen_example_h.jpg" style="height: 200px; margin: 5px;" alt="Stretching 1"/>
+  <img src="example/screen_example_v.jpg" style="height: 200px; margin: 5px;" alt="Stretching 2"/>
+</div>
 
 ## Features
 
