@@ -7,6 +7,10 @@
 
 A customizable numeric keyboard component for Qt Quick applications.
 
+![example app screenshot](example/screen_example.jpg)
+![example app screenshot](example/screen_example_h.jpg)
+![example app screenshot](example/screen_example_v.jpg)
+
 ## Features
 
 - **Numeric Input**: Designed specifically for entering numerical values.
